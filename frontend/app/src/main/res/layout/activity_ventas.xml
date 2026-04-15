@@ -1,24 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF8F8"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="24dp">
+    android:background="#FFF8F8">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Módulo Ventas"
-        android:textColor="#8E1F33"
-        android:textSize="28sp"
-        android:textStyle="bold" />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnVolverMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="REGRESAR" />
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#8E1F33"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registro de Ventas"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Registrar ventas ligadas a clientes"
+                android:textColor="#FBE5E7"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <EditText
+                android:id="@+id/etIdVenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID de la venta"
+                android:inputType="number"
+                android:minHeight="54dp"
+                android:padding="14dp" />
+
+            <EditText
+                android:id="@+id/etClienteId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="ID del cliente"
+                android:inputType="number"
+                android:minHeight="54dp"
+                android:padding="14dp" />
+
+            <EditText
+                android:id="@+id/etProductoId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="ID del producto"
+                android:inputType="number"
+                android:minHeight="54dp"
+                android:padding="14dp" />
+
+            <EditText
+                android:id="@+id/etCantidadVenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Cantidad"
+                android:inputType="number"
+                android:minHeight="54dp"
+                android:padding="14dp" />
+
+            <EditText
+                android:id="@+id/etFechaVenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Fecha (YYYY-MM-DD)"
+                android:minHeight="54dp"
+                android:padding="14dp" />
+
+            <EditText
+                android:id="@+id/etPrecioUnitarioVenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:enabled="false"
+                android:hint="Precio unitario"
+                android:minHeight="54dp"
+                android:padding="14dp" />
+
+            <EditText
+                android:id="@+id/etTotalVenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:enabled="false"
+                android:hint="Total"
+                android:minHeight="54dp"
+                android:padding="14dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBarVentas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnGuardarVenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#8E1F33"
+                android:text="REGISTRAR VENTA"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnConsultarVenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#B93A53"
+                android:text="CONSULTAR VENTA"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnVolverMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="REGRESAR" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
